@@ -8,7 +8,99 @@ Gunakan teks berikut untuk dibagikan ke tim di WhatsApp atau chat lain.
 composer require yovangga/laravel-chunk-process
 ```
 
-## 2. Chunk data dan kirim job ke antrean
+## 2. Contoh Job
+
+Buat job dulu di aplikasi, misalnya `app/Jobs/ProsesImporDataJob.php`:
+
+```php
+<?php
+
+namespace App\Jobs;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+
+class ProsesImporDataJob implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    public function __construct(public $chunk)
+    {
+    }
+
+    public function handle(): void
+    {
+        foreach ($this->chunk as $row) {
+            // proses setiap baris data di sini
+        }
+    }
+}
+```
+
+Contoh job batch/item:
+
+```php
+<?php
+
+namespace App\Jobs;
+
+use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
+
+class ProsesItemDataJob implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    public function __construct(public mixed $item)
+    {
+    }
+
+    public function handle(): void
+    {
+        // proses item
+    }
+}
+```
+
+Contoh job multi-step:
+
+```php
+class ProsesLangkahPertamaJob implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    public function __construct(public mixed $model)
+    {
+    }
+
+    public function handle(): void
+    {
+        // langkah pertama
+    }
+}
+
+class ProsesLangkahKeduaJob implements ShouldQueue
+{
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
+    public function __construct(public mixed $model)
+    {
+    }
+
+    public function handle(): void
+    {
+        // langkah kedua
+    }
+}
+```
+
+## 3. Chunk data dan kirim job ke antrean
 
 ```php
 use App\Jobs\ProsesImporDataJob;

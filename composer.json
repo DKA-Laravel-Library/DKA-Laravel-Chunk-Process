@@ -2,6 +2,7 @@
     "$schema": "https://getcomposer.org/schema.json",
     "name": "yovangga/laravel-chunk-process",
     "description": "Laravel Library For Background chunks",
+    "version": "1.0.0",
     "keywords": [
         "laravel",
         "yovangga",
