@@ -50,9 +50,15 @@ class LaravelChunkProcessServiceProvider extends ServiceProvider
             __DIR__.'/../public' => public_path('vendor/laravel-chunk-process'),
         ], ['laravel-chunk-process', 'laravel-chunk-process-assets']);
 
-        $this->publishesMigrations([
-            __DIR__.'/../database/migrations' => database_path('migrations'),
-        ], ['laravel-chunk-process', 'laravel-chunk-process-migrations']);
+        if (method_exists($this, 'publishesMigrations')) {
+            $this->publishesMigrations([
+                __DIR__.'/../database/migrations' => database_path('migrations'),
+            ], ['laravel-chunk-process', 'laravel-chunk-process-migrations']);
+        } else {
+            $this->publishes([
+                __DIR__.'/../database/migrations' => database_path('migrations'),
+            ], ['laravel-chunk-process', 'laravel-chunk-process-migrations']);
+        }
 
         $this->commands([
             LaravelChunkProcessCommand::class,
