@@ -3,11 +3,11 @@
 </div>
 
 <p align="center">
-    <a href="https://packagist.org/packages/yovangga-anandhika/laravel-chunk-process"><img src="https://img.shields.io/packagist/v/yovangga-anandhika/laravel-chunk-process.svg?style=flat-square" alt="Packagist"></a>
-    <a href="https://packagist.org/packages/yovangga-anandhika/laravel-chunk-process"><img src="https://img.shields.io/packagist/php-v/yovangga-anandhika/laravel-chunk-process.svg?style=flat-square" alt="PHP from Packagist"></a>
-    <a href="https://packagist.org/packages/yovangga-anandhika/laravel-chunk-process"><img src="https://badge.laravel.cloud/badge/yovangga-anandhika/laravel-chunk-process?style=flat" alt="Laravel versions"></a>
+    <a href="https://packagist.org/packages/yovangga/laravel-chunk-process"><img src="https://img.shields.io/packagist/v/yovangga/laravel-chunk-process.svg?style=flat-square" alt="Packagist"></a>
+    <a href="https://packagist.org/packages/yovangga/laravel-chunk-process"><img src="https://img.shields.io/packagist/php-v/yovangga/laravel-chunk-process.svg?style=flat-square" alt="PHP from Packagist"></a>
+    <a href="https://packagist.org/packages/yovangga/laravel-chunk-process"><img src="https://badge.laravel.cloud/badge/yovangga/laravel-chunk-process?style=flat" alt="Laravel versions"></a>
     <a href="https://github.com/yovangga-anandhika/laravel-chunk-process/actions"><img alt="GitHub Workflow Status (main)" src="https://img.shields.io/github/actions/workflow/status/yovangga-anandhika/laravel-chunk-process/tests.yml?branch=main&label=Tests&style=flat-square"></a>
-    <a href="https://packagist.org/packages/yovangga-anandhika/laravel-chunk-process"><img src="https://img.shields.io/packagist/dt/yovangga-anandhika/laravel-chunk-process.svg?style=flat-square" alt="Total Downloads"></a>
+    <a href="https://packagist.org/packages/yovangga/laravel-chunk-process"><img src="https://img.shields.io/packagist/dt/yovangga/laravel-chunk-process.svg?style=flat-square" alt="Total Downloads"></a>
 </p>
 
 Laravel Library For Background chunks
@@ -17,7 +17,7 @@ Laravel Library For Background chunks
 You can install the package via Composer:
 
 ```bash
-composer require yovangga-anandhika/laravel-chunk-process
+composer require yovangga/laravel-chunk-process
 ```
 
 You may publish all of the package's resources at once:

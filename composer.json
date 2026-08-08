@@ -1,10 +1,10 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "yovangga-anandhika/laravel-chunk-process",
+    "name": "yovangga/laravel-chunk-process",
     "description": "Laravel Library For Background chunks",
     "keywords": [
         "laravel",
-        "yovangga-anandhika",
+        "yovangga",
         "laravel-chunk-process"
     ],
     "homepage": "https://github.com/yovangga-anandhika/laravel-chunk-process",

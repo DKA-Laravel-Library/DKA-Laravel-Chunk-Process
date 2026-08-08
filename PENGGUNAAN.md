@@ -5,7 +5,7 @@ Gunakan teks berikut untuk dibagikan ke tim di WhatsApp atau chat lain.
 ## 1. Instalasi
 
 ```bash
-composer require yovangga-anandhika/laravel-chunk-process
+composer require yovangga/laravel-chunk-process
 ```
 
 ## 2. Chunk data dan kirim job ke antrean
